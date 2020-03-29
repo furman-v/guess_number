@@ -16,21 +16,22 @@ function checkNumber(input, number) {
   } else {
     checkValue(input, number);
   }
-  function checkValue(input, number) {
-    const prgrph = document.getElementById("paragraph");
-    if (input.value > number) {
-      prgrph.innerHTML = "Your number is more than allowed";
-      prgrph.className = "red";
-    } else if (input.value < number) {
-      prgrph.innerHTML = "Your number is less than Random Number";
-      prgrph.className = "green";
-    } else {
-      prgrph.innerHTML = `You won! I was Thinking about ${number}`;
-      prgrph.className = "yellow";
-      randomNumber = getRandomNumber(8);
-    }
+}
+function checkValue(input, number) {
+  const prgrph = document.getElementById("paragraph");
+  if (input.value > number) {
+    prgrph.innerHTML = "Your number is more than allowed";
+    prgrph.className = "red";
+  } else if (input.value < number) {
+    prgrph.innerHTML = "Your number is less than Random Number";
+    prgrph.className = "green";
+  } else {
+    prgrph.innerHTML = `You won! I was Thinking about ${number}`;
+    prgrph.className = "yellow";
+    randomNumber = getRandomNumber(8);
   }
 }
+
 function getRandomNumber(n) {
   return Math.floor(Math.random() * n + 1);
 }
